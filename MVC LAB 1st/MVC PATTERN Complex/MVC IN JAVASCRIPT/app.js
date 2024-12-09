@@ -47,6 +47,7 @@ class StudentController {
     }
 
     // Add a new student
+    // Add a new student
     addStudent(name, rollNo) {
         const student = new Student(name, rollNo);
         this.students.push(student);
