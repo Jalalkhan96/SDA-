@@ -3,6 +3,14 @@
 This repository provides solutions to common software architecture problems with practical code examples. These solutions help manage scalability, complexity, fault tolerance, data consistency, and security challenges in distributed systems, particularly in microservices-based architectures.
 ---
 
+## Table of Contents
+1. [Scalability Issues](#scalability-issues)
+2. [Complexity in Microservices Communication](#complexity-in-microservices-communication)
+3. [Fault Tolerance and Resilience](#fault-tolerance-and-resilience)
+4. [Data Consistency Across Services](#data-consistency-across-services)
+5. [Security Challenges](#security-challenges)
+
+---
 ## Scalability Issues
 
 **Problem:**  
