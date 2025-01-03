@@ -176,7 +176,7 @@ public class OAuth2Server extends ResourceServerConfigurerAdapter {
     }
 }
 
-# OAuth2 Authentication Implementation
+# Auth2 Authentication Implementation
 
 ## Steps to Implement OAuth2 Authentication:
 
