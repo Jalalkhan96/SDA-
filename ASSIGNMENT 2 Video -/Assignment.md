@@ -1,5 +1,4 @@
 # Netflix Architecture Overview
-
 This document outlines the key architectural components and strategies that power Netflix's world-class streaming platform.
 
 ---
