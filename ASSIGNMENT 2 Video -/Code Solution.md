@@ -46,6 +46,7 @@ http {
         }
     }
 }
+---
 
 ## Microservices Communication: Circuit Breaker with Resilience4j in Java
 
@@ -64,7 +65,7 @@ In this example, we will use **Resilience4j**, a lightweight library for fault t
 
 ## Code Example: Circuit Breaker with Resilience4j in Java
 
-```java
+
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
 
@@ -101,6 +102,7 @@ public class CircuitBreakerExample {
         throw new RuntimeException("Service failed");
     }
 }
+---
 
 ##  Fault Tolerance and Resilience
 
@@ -115,7 +117,7 @@ To address this challenge, we can:
 
 ### Code Example: Graceful Degradation with Fallback
 
-```java
+
 import io.github.resilience4j.fallback.Fallback;
 
 public class FallbackExample {
@@ -136,6 +138,8 @@ public class FallbackExample {
     }
 }
 
+---
+
 ## Data Consistency Across Services
 
 ### **Problem:**
@@ -151,7 +155,7 @@ To solve these challenges, we use the following approaches:
 
 In this example, we use **Apache Kafka** as a message broker to demonstrate event sourcing. The producer sends an event (e.g., `order_created`) to a Kafka topic, and this event can be consumed by other microservices to update their state.
 
-```java
+
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
@@ -182,6 +186,7 @@ public class EventProducer {
     }
 }
 
+---
 ##  Security Challenges
 
 **Problem:** Securing a distributed architecture is complex.
@@ -197,7 +202,7 @@ Implement OAuth, Token-Based Authentication, and Encryption to secure communicat
 
 ### **Code Example: OAuth2 Authentication with Spring Boot**
 
-```java
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -228,7 +233,7 @@ public class OAuth2Server extends ResourceServerConfigurerAdapter {
 - Add the necessary dependencies for Spring Security and OAuth2 to your `pom.xml` (for Maven) or `build.gradle` (for Gradle).
 
 #### Maven (pom.xml)
-```xml
+
 <dependencies>
     <!-- Spring Security OAuth2 -->
     <dependency>
