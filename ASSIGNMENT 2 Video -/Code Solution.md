@@ -13,7 +13,7 @@ This repository provides solutions to common software architecture problems with
 
 ---
 
-## 1. Scalability Issues
+## Scalability Issues
 
 **Problem:**  
 As the system grows, it becomes harder to manage and scale individual components.  
