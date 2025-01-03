@@ -47,7 +47,7 @@ http {
     }
 }
 
-## 2.Microservices Communication: Circuit Breaker with Resilience4j in Java
+## Microservices Communication: Circuit Breaker with Resilience4j in Java
 
 ## Problem: Complexity in Microservices Communication
 In a microservices architecture, communication between services can introduce significant complexities. Common issues include:
@@ -102,7 +102,7 @@ public class CircuitBreakerExample {
     }
 }
 
-## 3. Fault Tolerance and Resilience
+##  Fault Tolerance and Resilience
 
 ### Problem
 Ensuring the system stays operational despite failures in individual components. This challenge arises when a single service failure causes cascading issues across the entire application, or when handling unexpected server outages.
@@ -136,7 +136,7 @@ public class FallbackExample {
     }
 }
 
-## 4. Data Consistency Across Services
+## Data Consistency Across Services
 
 ### **Problem:**
 Maintaining data consistency in a distributed system can be challenging, especially when multiple microservices are involved. Different microservices may have outdated or conflicting data, leading to synchronization issues during real-time operations. This can cause system instability and unreliable data across services.
@@ -182,7 +182,7 @@ public class EventProducer {
     }
 }
 
-## 5. Security Challenges
+##  Security Challenges
 
 **Problem:** Securing a distributed architecture is complex.
 
