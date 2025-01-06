@@ -1,194 +1,118 @@
-Smart Home Energy Saving System - Control Smart Light
+# Smart Home Energy Saving System - Control Smart Light
 
-This project is a simple implementation of a Smart Home Energy Saving System. The main use case demonstrated is "Control Smart Light". The system is implemented in Java, following a class diagram structure that defines specific roles for each class.
+This project demonstrates a simple implementation of a **Smart Home Energy Saving System** with a focus on controlling smart lights. The system is implemented in **Java** and allows users to authenticate, connect to a smart home hub, and control smart light features via a mobile app interface.
 
-Project Overview
+---
 
-This system allows users to:
+## Project Overview
 
-Authenticate themselves.
+The system enables users to:
 
-Connect to a Smart Home Hub.
+- **Authenticate** securely using their credentials.
+- **Connect** to the Smart Home Hub.
+- Establish a connection with **smart light sensors**.
+- **Control a Smart Light** via a **Mobile App** with the following functionalities:
+  - Turn the light **ON/OFF**.
+  - Set a **timer** for the light.
+  - Adjust the **intensity** of the light.
+  - Change the **color** of the light.
 
-Establish a connection with sensors.
+---
 
-Control a Smart Light via a Mobile App.
+## Features
 
-The control functionalities include:
+### **User Authentication**
+- Securely authenticate users using a valid username and password.
 
-Turning the light ON/OFF.
+### **Smart Home Hub**
+- Manage the connection to the smart home hub to control the light.
 
-Setting a timer for the light.
+### **Smart Light Control**
+- **Turn ON/OFF** the light.
+- **Set intensity** to adjust the light's brightness.
+- **Change color** for customized lighting.
+- **Set a timer** for automatic control of the light.
 
-Adjusting the light's intensity.
+### **Mobile App Interface**
+- Offers a user-friendly interface to control the light features.
 
-Changing the light's color.
+---
 
-Class Structure
+## Class Structure
 
-1. User
+### **User**
+- Handles user authentication.
 
-Handles user authentication.
+  **Attributes:**
+  - `name` (String): User's name.
+  - `password` (String): User's password.
 
-Attributes:
+  **Methods:**
+  - `authenticate(inputName: String, inputPassword: String): boolean`: Validates user credentials.
 
-name: String - Name of the user.
+---
 
-password: String - User's password.
+### **SmartHomeHub**
+- Manages connection to the smart home hub.
 
-Methods:
+  **Attributes:**
+  - `connectionEstablished` (boolean): Tracks the connection status.
 
-authenticate(inputName: String, inputPassword: String): boolean - Validates user credentials.
+  **Methods:**
+  - `establishConnection()`: Establishes a connection to the hub.
+  - `isConnectionEstablished()`: Checks if the connection is active.
 
-2. SmartHomeHub
+---
 
-Manages the connection to the smart home hub.
+### **Connection**
+- Represents a connection to a specific sensor.
 
-Attributes:
+  **Attributes:**
+  - `sensorName` (String): Name of the sensor.
+  - `sensorID` (String): Unique sensor ID.
 
-connectionEstablished: boolean - Tracks if the connection is active.
+  **Methods:**
+  - `connectToSensor()`: Connects to the specified sensor.
 
-Methods:
+---
 
-establishConnection() - Establishes a connection with the hub.
+### **SmartLight**
+- Handles operations related to the smart light.
 
-isConnectionEstablished(): boolean - Checks if the connection is established.
+  **Methods:**
+  - `setTimer()`: Sets a timer for the light.
+  - `changeState(isOn: boolean)`: Turns the light ON/OFF.
+  - `setIntensityLevel(level: int)`: Adjusts the intensity level.
+  - `setColor(color: String)`: Changes the color of the light.
+  - `showAllFeatures()`: Displays all available features of the smart light.
+  - `turnOn()`: Turns the light ON.
+  - `turnOff()`: Turns the light OFF.
 
-3. Connection
+---
 
-Represents the connection to a specific sensor.
+### **MobileApp**
+- Provides an interface to control the smart light via the mobile app.
 
-Attributes:
+  **Methods:**
+  - `setTimer()`: Sets a timer for the light.
+  - `setState(isOn: boolean)`: Turns the light ON/OFF.
+  - `setIntensityLevel(level: int)`: Adjusts the intensity level.
+  - `setColor(color: String)`: Changes the color of the light.
 
-sensorName: String - Name of the sensor.
+---
 
-sensorID: String - Unique ID of the sensor.
+### **Main**
+- The entry point of the application.
+  - User authentication.
+  - Connecting to the Smart Home Hub.
+  - Establishing sensor connection.
+  - Controlling the Smart Light using the Mobile App.
 
-Methods:
+---
 
-connectToSensor() - Connects to the specified sensor.
+## How to Run the Project
 
-4. SmartLight
-
-Handles all operations related to the smart light.
-
-Methods:
-
-setTimer() - Sets a timer for the light.
-
-changeState(isOn: boolean) - Turns the light ON/OFF.
-
-setIntensityLevel(level: int) - Adjusts the light's intensity.
-
-setColor(color: String) - Changes the light's color.
-
-showAllFeatures() - Displays all the available features.
-
-turnOn() - Turns the light ON.
-
-turnOff() - Turns the light OFF.
-
-5. MobileApp
-
-Provides an interface to control the smart light via the app.
-
-Methods:
-
-setTimer() - Sets a timer for the light.
-
-setState(isOn: boolean) - Turns the light ON/OFF.
-
-setIntensityLevel(level: int) - Adjusts the light's intensity.
-
-setColor(color: String) - Changes the light's color.
-
-6. Main
-
-The entry point of the application. Demonstrates the following workflow:
-
-User authentication.
-
-Connecting to the Smart Home Hub.
-
-Establishing a sensor connection.
-
-Controlling the Smart Light using the Mobile App.
-
-Features
-
-User Authentication:
-
-Ensures secure access to the system.
-
-Users must provide valid credentials.
-
-Smart Home Hub:
-
-Manages the connection to the system's hub.
-
-Smart Light Control:
-
-Turn ON/OFF the light.
-
-Adjust the intensity level.
-
-Change the light's color.
-
-Set a timer for automatic control.
-
-Mobile App Interface:
-
-Provides user-friendly access to smart light controls.
-
-How to Run the Project
-
-Clone the Repository:
-
-git clone <repository-url>
-
-Navigate to the Project Directory:
-
-cd SmartHomeEnergySavingSystem
-
-Compile the Code:
-
-javac Main.java
-
-Run the Application:
-
-java Main
-
-Follow the Console Instructions:
-
-Authenticate using a username and password.
-
-Control the smart light via the simulated Mobile App.
-
-Example Output
-
-User authenticated successfully.
-Connection with Smart Home Hub established.
-Connected to sensor: Living Room Light (ID: Sensor123)
-Timer for Smart Light set.
-Smart Light turned ON.
-Smart Light intensity set to level: 5.
-Smart Light color set to: Blue.
-Smart Light Features: Timer, Change State, Set Intensity, Set Color.
-Smart Light turned OFF.
-
-Project Dependencies
-
-Java Development Kit (JDK) 8 or higher.
-
-A text editor or IDE for Java (e.g., IntelliJ IDEA, Eclipse, or VS Code).
-
-Author
- 
- Name : Jalal Khan
-RegNO:  FA22-BSE-093
-
-Project for Smart Home Energy Saving System.
-
-License
-
-This project is licensed under the MIT License. Feel free to use and modify it for educational purposes.
+1. **Clone the Repository**  
+   Clone the project to your local machine:
+   ```bash
+   git clone https://github.com/Jalalkhan96/SDA-/tree/main/LAB%20FINAL
