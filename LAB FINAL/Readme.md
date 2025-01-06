@@ -116,6 +116,18 @@ The system enables users to:
    Clone the project to your local machine:
    ```bash
    git clone https://github.com/Jalalkhan96/SDA-/tree/main/LAB%20FINAL
+
+
+   SmartHomeEnergySavingSystem/
+├── User.java
+├── SmartHomeHub.java
+├── Connection.java
+├── SmartLight.java
+├── MobileApp.java
+├── Main.java
+├── README.md
+
+
 Enter username: 
 jalalkhan
 
