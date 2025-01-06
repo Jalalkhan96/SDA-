@@ -121,11 +121,17 @@ The system enables users to:
 
    SmartHomeEnergySavingSystem/
 ├── User.java
+
 ├── SmartHomeHub.java
+
 ├── Connection.java
+
 ├── SmartLight.java
+
 ├── MobileApp.java
+
 ├── Main.java
+
 ├── README.md
 
 
