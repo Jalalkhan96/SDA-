@@ -116,3 +116,28 @@ The system enables users to:
    Clone the project to your local machine:
    ```bash
    git clone https://github.com/Jalalkhan96/SDA-/tree/main/LAB%20FINAL
+Enter username: 
+jalalkhan
+Enter password: 
+111
+Authentication successful.
+Connection to Smart Home Hub established.
+Connected to sensor: Living Room Light (ID: Sensor123)
+
+Please select an action:
+1. Turn ON/OFF light
+2. Set Timer
+3. Adjust Intensity
+4. Change Color
+
+Enter your choice: 
+1
+Enter the light state (true for ON, false for OFF): 
+true
+Light turned ON.
+
+Please select another action:
+1. Turn ON/OFF light
+2. Set Timer
+3. Adjust Intensity
+4. Change Color
