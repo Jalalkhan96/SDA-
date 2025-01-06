@@ -116,7 +116,8 @@ The system enables users to:
    Clone the project to your local machine:
    ```bash
    git clone https://github.com/Jalalkhan96/SDA-/tree/main/LAB%20FINAL
-
+   
+---
 
    SmartHomeEnergySavingSystem/
 ├── User.java
